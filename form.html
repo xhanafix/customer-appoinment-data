@@ -1,0 +1,438 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ZEDYA Customer Details Form</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #f5f5f5;
+        }
+        .form-container {
+            background-color: white;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        h1 {
+            color: #2c3e50;
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        .form-section {
+            margin-bottom: 25px;
+        }
+        .form-section h2 {
+            color: #34495e;
+            font-size: 1.2em;
+            margin-bottom: 15px;
+        }
+        .form-group {
+            margin-bottom: 15px;
+        }
+        label {
+            display: block;
+            margin-bottom: 5px;
+            color: #2c3e50;
+        }
+        input[type="text"],
+        input[type="email"],
+        input[type="tel"],
+        input[type="number"],
+        input[type="date"],
+        textarea,
+        select {
+            width: 100%;
+            padding: 8px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+        .inline-group {
+            display: flex;
+            gap: 10px;
+        }
+        .inline-group input {
+            flex: 1;
+        }
+        textarea {
+            height: 100px;
+            resize: vertical;
+        }
+        .submit-btn {
+            background-color: #3498db;
+            color: white;
+            padding: 12px 24px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            width: 100%;
+            font-size: 16px;
+        }
+        .submit-btn:hover {
+            background-color: #2980b9;
+        }
+        .checkbox-group {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        .checkbox-group input[type="checkbox"] {
+            margin: 0;
+        }
+        @media (max-width: 600px) {
+            .inline-group {
+                flex-direction: column;
+                gap: 0;
+            }
+        }
+        .button-group {
+            display: flex;
+            gap: 10px;
+            margin-top: 20px;
+        }
+        .preview-btn {
+            background-color: #2ecc71;
+            color: white;
+            padding: 12px 24px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            width: 100%;
+            font-size: 16px;
+        }
+        .preview-btn:hover {
+            background-color: #27ae60;
+        }
+        @media (max-width: 600px) {
+            .button-group {
+                flex-direction: column;
+            }
+        }
+        .na-button {
+            background-color: #95a5a6;
+            color: white;
+            padding: 4px 8px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 12px;
+            margin-left: 5px;
+        }
+        .na-button:hover {
+            background-color: #7f8c8d;
+        }
+        .input-group {
+            display: flex;
+            align-items: center;
+        }
+        .input-wrapper {
+            flex: 1;
+        }
+    </style>
+</head>
+<body>
+    <div class="form-container">
+        <h1>ZEDYA Customer Details Form</h1>
+        <form id="customerForm" action="https://formsubmit.co/hanafihassan@gmail.com" method="POST">
+            <!-- Updated FormSubmit configuration -->
+            <input type="hidden" name="_subject" value="New ZEDYA Customer Details Submission">
+            <input type="hidden" name="_template" value="table">
+            <input type="hidden" name="_captcha" value="false">
+            <input type="hidden" name="_autoresponse" value="Thank you for submitting your details to ZEDYA. We will contact you shortly.">
+
+            <div class="form-section" style="background-color: #f8f9fa; padding: 15px; border-radius: 4px; margin-bottom: 30px;">
+                <h2>Appointment Details</h2>
+                <div class="inline-group">
+                    <div class="form-group">
+                        <label for="appointmentDate">Date of Appointment</label>
+                        <input type="date" id="appointmentDate" name="appointmentDate" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="appointmentTime">Time of Appointment</label>
+                        <input type="time" id="appointmentTime" name="appointmentTime" required>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="salesExecutive">Sales Executive Name</label>
+                    <input type="text" id="salesExecutive" name="salesExecutive" required>
+                </div>
+            </div>
+
+            <div class="form-section">
+                <h2>1. Customer Information</h2>
+                <div class="inline-group">
+                    <div class="form-group">
+                        <label for="firstName">First Name</label>
+                        <input type="text" id="firstName" name="firstName" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="lastName">Last Name</label>
+                        <input type="text" id="lastName" name="lastName" required>
+                    </div>
+                </div>
+                
+                <div class="form-group">
+                    <label for="email">Email Address</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="phone">Phone Number</label>
+                    <input type="tel" id="phone" name="phone" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="address">Address</label>
+                    <input type="text" id="address" name="address" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="cityState">City, State, ZIP Code</label>
+                    <input type="text" id="cityState" name="cityState" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="postcode">Postcode (if applicable)</label>
+                    <input type="text" id="postcode" name="postcode">
+                </div>
+            </div>
+
+            <div class="form-section">
+                <h2>2. Identification Documents</h2>
+                <div class="form-group">
+                    <label for="nric">NRIC/IC Number</label>
+                    <input type="text" id="nric" name="nric" required>
+                </div>
+            </div>
+
+            <div class="form-section">
+                <h2>3. Property Details</h2>
+                <div class="form-group">
+                    <label for="location">Location of Land (City/Town)</label>
+                    <input type="text" id="location" name="location" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="landSize">Size of Land (in sq. ft. or acres)</label>
+                    <input type="text" id="landSize" name="landSize" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="ownershipStatus">Ownership Status</label>
+                    <select id="ownershipStatus" name="ownershipStatus" required>
+                        <option value="">Select status</option>
+                        <option value="own">Own</option>
+                        <option value="rent">Rent</option>
+                        <option value="lease">Lease</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="form-section">
+                <h2>4. Customer Requirements</h2>
+                <div class="form-group">
+                    <label for="propertyPurpose">Purpose of the Property</label>
+                    <select id="propertyPurpose" name="propertyPurpose" required>
+                        <option value="">Select purpose</option>
+                        <option value="residential">Residential</option>
+                        <option value="commercial">Commercial</option>
+                    </select>
+                </div>
+                
+                <div class="form-group">
+                    <label for="floors">Number of Floors Required</label>
+                    <input type="number" id="floors" name="floors" required min="1">
+                </div>
+                
+                <div class="form-group">
+                    <label for="amenities">Specific Needs or Amenities Desired</label>
+                    <textarea id="amenities" name="amenities" placeholder="e.g., modern design, outdoor spaces, parking facilities"></textarea>
+                </div>
+            </div>
+
+            <div class="form-section">
+                <h2>5. Financial Information</h2>
+                <div class="form-group">
+                    <label for="budget">Budget Range for the Project</label>
+                    <input type="text" id="budget" name="budget" placeholder="e.g., RM 50,000 to RM 5,000,000" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="paymentTerms">Preferred Payment Terms</label>
+                    <select id="paymentTerms" name="paymentTerms" required>
+                        <option value="">Select payment terms</option>
+                        <option value="cash">Cash</option>
+                        <option value="cheque">Cheque</option>
+                        <option value="online">Online Transfer</option>
+                    </select>
+                </div>
+                
+                <div class="form-group">
+                    <label for="downpayment">Downpayment Amount (if applicable)</label>
+                    <input type="text" id="downpayment" name="downpayment">
+                </div>
+            </div>
+
+            <div class="form-section">
+                <h2>6. Project Timeline</h2>
+                <div class="form-group">
+                    <label for="startDate">Preferred Start Date for Construction</label>
+                    <input type="date" id="startDate" name="startDate" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="constraints">Any Constraints</label>
+                    <textarea id="constraints" name="constraints"></textarea>
+                </div>
+            </div>
+
+            <div class="form-section">
+                <h2>7. Background Information</h2>
+                <div class="form-group">
+                    <label for="source">How Did You Hear About ZEDYA?</label>
+                    <select id="source" name="source" required>
+                        <option value="">Select source</option>
+                        <option value="social">Social Media</option>
+                        <option value="referral">Referral</option>
+                        <option value="search">Online Search</option>
+                    </select>
+                </div>
+                
+                <div class="form-group">
+                    <label for="previousCustomer">Have you worked with ZEDYA before?</label>
+                    <select id="previousCustomer" name="previousCustomer" required>
+                        <option value="">Select option</option>
+                        <option value="yes">Yes</option>
+                        <option value="no">No</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="form-section">
+                <h2>8. References</h2>
+                <div class="form-group">
+                    <label for="references">Contact Information of Previous Clients/Partners (if applicable)</label>
+                    <textarea id="references" name="references"></textarea>
+                </div>
+            </div>
+
+            <div class="form-section">
+                <h2>9. Additional Notes</h2>
+                <div class="form-group">
+                    <label for="notes">Additional Notes for Sales Executive</label>
+                    <textarea id="notes" name="notes" placeholder="Any specific requirements or preferences"></textarea>
+                </div>
+            </div>
+
+            <div class="form-section">
+                <h2>10. Marketing Preference</h2>
+                <div class="form-group checkbox-group">
+                    <input type="checkbox" id="marketing" name="marketing">
+                    <label for="marketing">I consent to receiving marketing communications from ZEDYA via email, SMS, or other channels for promotional offers.</label>
+                </div>
+            </div>
+
+            <div class="button-group">
+                <button type="button" class="preview-btn" onclick="previewForm()">Preview Form</button>
+                <button type="submit" class="submit-btn">Submit Form</button>
+            </div>
+        </form>
+    </div>
+
+    <script>
+        function previewForm() {
+            // Create a new window for preview
+            let previewWindow = window.open('', '_blank');
+            let formData = new FormData(document.getElementById('customerForm'));
+            
+            // Create preview HTML
+            let previewContent = `
+                <html>
+                <head>
+                    <title>Form Preview</title>
+                    <style>
+                        body { font-family: Arial, sans-serif; padding: 20px; }
+                        .preview-item { margin-bottom: 10px; }
+                        .label { font-weight: bold; }
+                        @media print {
+                            .no-print { display: none; }
+                        }
+                    </style>
+                </head>
+                <body>
+                    <h1>ZEDYA Customer Details Form - Preview</h1>
+                    <div class="no-print">
+                        <button onclick="window.print()">Print</button>
+                        <hr>
+                    </div>
+            `;
+
+            // Add form data to preview
+            for (let pair of formData.entries()) {
+                if (pair[0].startsWith('_')) continue; // Skip hidden FormSubmit fields
+                let label = document.querySelector(`label[for="${pair[0]}"]`);
+                let labelText = label ? label.textContent : pair[0];
+                
+                if (pair[1]) { // Only show fields with values
+                    previewContent += `
+                        <div class="preview-item">
+                            <div class="label">${labelText}:</div>
+                            <div>${pair[1]}</div>
+                        </div>
+                    `;
+                }
+            }
+
+            previewContent += `
+                </body>
+                </html>
+            `;
+
+            // Write to preview window
+            previewWindow.document.write(previewContent);
+            previewWindow.document.close();
+        }
+
+        function addNAButtons() {
+            const inputs = document.querySelectorAll('input[type="text"], input[type="email"], input[type="tel"], input[type="number"], textarea');
+            
+            inputs.forEach(input => {
+                if (input.type === 'hidden') return;
+                
+                // Create wrapper if not already wrapped
+                if (!input.parentElement.classList.contains('input-wrapper')) {
+                    const wrapper = document.createElement('div');
+                    wrapper.className = 'input-group';
+                    
+                    const inputWrapper = document.createElement('div');
+                    inputWrapper.className = 'input-wrapper';
+                    
+                    input.parentNode.insertBefore(wrapper, input);
+                    inputWrapper.appendChild(input);
+                    wrapper.appendChild(inputWrapper);
+                    
+                    // Add N/A button
+                    const naButton = document.createElement('button');
+                    naButton.type = 'button';
+                    naButton.className = 'na-button';
+                    naButton.textContent = 'N/A';
+                    naButton.onclick = function() {
+                        input.value = 'N/A';
+                    };
+                    wrapper.appendChild(naButton);
+                }
+            });
+        }
+
+        // Call the function when the page loads
+        window.onload = function() {
+            addNAButtons();
+        };
+    </script>
+</body>
+</html>
